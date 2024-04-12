@@ -1,0 +1,59 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "esnext",
+    // 啟用所有嚴格類型檢查選項
+    // 啟用 --strict 相當於啟用:
+    // --noImplicitAny, --noImplicitThis, --alwaysStrict, --strictNullChecks, --strictFunctionTypes,--strictPropertyInitialization
+    "strict": true,
+    // 允許編譯器編譯 .js, .jsx 檔案
+    "allowJs": true,
+    // 允許在 .js 檔案中報錯, 通常會與 allowJS 一同使用
+    "checkJs": false,
+    // 允許使用 jsx
+    "jsx": "preserve",
+    "declaration": true,
+    // 移除註解
+    "removeComments": true,
+    // 不可忽略 any
+    "noImplicitAny": true,
+    // 關閉 this 類型註解提示
+    "noImplicitThis": true,
+    // null / undefined 不可作為其他類型的子類型, 如:
+    // let a = null; <--- 會報錯
+    "strictNullChecks": true,
+    // 生成 enumeration 枚舉的映射代碼
+    "preserveConstEnums": true,
+    // 根目錄
+    // 輸出目錄
+    "outDir": "./ts-out-dir",
+    // 是否輸出 src2.js.map 檔案
+    "sourceMap": false,
+    // 已定義的變數但未被使用
+    "noUnusedLocals": false,
+    // 是否允許把 .json 檔案作為模組進行解析
+    "resolveJsonModule": true,
+    // 同 noUnusedLocals, 針對 function
+    "noUnusedParameters": false,
+    // 模組解析的模式, ts 默認使用 node 模式, 即用相對的方式引入
+    "moduleResolution": "node",
+    // 允许 export = 導出, 由 import from = 引入
+    "esModuleInterop": true,
+    // 忽略所有的聲明文件 (*.d.ts) 的類型檢查
+    "skipLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    },
+    // 指定默認的讀取目錄
+    // "typeRoots": ["./node_modules/@types/", "./types"],
+    "lib": ["ES2018", "DOM"]
+  },
+  // "files": [],
+  // include 包含資料夾會被 ts 進行讀取
+  "include": ["src", "typings"]
+  // exclude 可以去除 include 中指定的檔案, 不能去除 file 指定的檔案
+  //  "exclude": [
+  ////    "src/src1.ts"
+  //  ]
+}

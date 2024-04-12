@@ -1,0 +1,73 @@
+$table-shadow: rgba(0, 0, 0, 0.15) 5px 5px 5px 0px;
+$table-border: 1px solid #ebeef5;
+$header-bg-color: #f4f7fd;
+$header-text-color: #606266;
+$header-text-weight: 700;
+$body-bg-color: transparent;
+$body-text-color: #303133;
+
+//reset vxe-table style
+.vxe-table--main-wrapper {
+  border-bottom: $table-border !important;
+  border-radius: 3px;
+}
+
+.vxe-body--row.row--hover,
+.vxe-body--row.row--hover.row--stripe {
+  background-color: #97b3ce66 !important;
+}
+
+.vxe-table--render-default,
+.vxe-table--render-default.size--mini {
+  font-family: 'Arial';
+  font-size: 12px !important;
+}
+
+//table head
+.vxe-table--header {
+  background-color: $header-bg-color !important;
+  box-shadow: rgba(214, 217, 223, 0.75) 0px -50px 36px -28px inset;
+}
+.vxe-header--column {
+  height: 30px !important;
+  .vxe-cell--title {
+    color: $header-text-color !important;
+    font-weight: $header-text-weight;
+  }
+}
+
+//table body
+.vxe-body--column {
+  height: 28px !important;
+}
+
+//table 外框
+.vxe-table--border-line {
+  border: $table-border !important;
+  border-radius: 3px;
+  box-shadow: $table-shadow;
+}
+
+// .vxe-table--render-default.border--full {
+  // .vxe-body--column,
+  // .vxe-footer--column,
+  // .vxe-header--column {
+  //   background-repeat: no-repeat;
+  //   background-size: 1px 100%, 100% 1px;
+  //   background-position: 100% 0, 100% 100%;
+  //   background-image: linear-gradient(#dce5eb, #dce5eb), linear-gradient(#dce5eb, #dce5eb);
+  // }
+// }
+
+//隱藏 footer 的 scrollbar 樣式
+.vxe-footer--gutter {
+  background-color: #e4ecf0 !important;
+}
+
+//解決 vxe-table footer 會有破版問題
+.vxe-table--footer-wrapper {
+  overflow-x: hidden !important;
+  .vxe-cell {
+    width: auto !important;
+  }
+}

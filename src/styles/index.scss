@@ -1,0 +1,27 @@
+@import './reset-style.scss';
+@import './element-style-override.scss';
+@import './vxe-style-override.scss';
+@import './scss-suger.scss';
+@import './transition.scss';
+@import './custom-style.scss';
+
+// scroll
+@mixin main-show-wh() {
+  /* css declare */
+  //height: calc(100vh - #{$navBarHeight} - #{$tagViewHeight} - #{$appMainPadding * 2});
+  height: calc(100vh - #{var(--nav-bar-height)} - #{var(--tag-view-height)} - #{calc(var(--app-main-padding) * 2)});
+  width: auto;
+  // width: 100%;
+}
+.scroll-y {
+  @include main-show-wh();
+  overflow-y: auto;
+}
+.scroll-x {
+  @include main-show-wh();
+  overflow-x: auto;
+}
+.scroll-xy {
+  @include main-show-wh();
+  overflow: auto;
+}

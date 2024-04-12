@@ -1,0 +1,160 @@
+//** custom element **//
+$main-title-bg: #e4e7ed;
+$link-color: var(--el-color-primary);
+$error: var(--error);
+$blue: #337ecc;
+$red: #f56c6c;
+$gray: #979797;
+
+//寬度 100%
+.w-100 {
+  width: 100% !important;
+}
+
+//多個 el-descriptions 黏在一起時需要修改 border 樣式
+.multiple-el-descriptions {
+  .el-descriptions:not(:first-child) {
+    .el-descriptions__body {
+      border-top: none;
+      .el-descriptions__label:first-child {
+        border-top: none;
+      }
+      .el-descriptions__content:nth-child(2) {
+        border-top: none;
+      }
+    }
+  }
+}
+
+//自定義 container
+.ce-main-container {
+  width: calc(100% - var(--sidebar-width-close));
+  margin: 1rem 1.6875rem;
+}
+
+//自定義大標題
+.ce-title-lg {
+  border-radius: 0.25rem;
+  padding: 0.75rem;
+  font-size: 13px;
+  font-weight: 900;
+  background-color: $main-title-bg;
+  width: 100%;
+  line-height: 24px;
+}
+
+//自定義 toolbar
+.ce-toolbar {
+  margin: 0.75rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  strong {
+    line-height: 24px;
+    font-size: 12px;
+  }
+
+  > span:first-child {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .el-input__wrapper {
+    height: 24px !important;
+  }
+}
+
+//超連結 anchor
+a.ce-link {
+  color: $link-color;
+  text-decoration: underline;
+}
+
+//star 圖標 (*)
+.star-icon {
+  color: #f56c6c;
+  font-size: 14px;
+  margin-right: 4px;
+}
+
+//navbar 上的 icon
+.nav-icon {
+  padding-right: 12px;
+}
+
+//el-dialog 的 footer slot 樣式
+.ce-dialog-footer-btn {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: var(--el-dialog-padding-primary);
+  padding-top: calc(var(--el-dialog-padding-primary));
+  padding-bottom: calc(var(--el-dialog-padding-primary) - 6px);
+}
+
+//** 文字樣式 **//
+//驗證文字
+.ce-validate {
+  color: $error;
+  text-align: left;
+}
+//粗體字
+.ce-text-bold {
+  font-weight: bold;
+}
+//藍字
+.ce-blue-color {
+  color: $blue;
+}
+//紅字
+.ce-red-color {
+  color: $red;
+}
+//灰字
+.ce-gray-color {
+  color: $gray;
+}
+//斜體字
+.ce-italic {
+  font-style: italic;
+}
+//灰色斜體字
+.ce-gray-color-italic {
+  color: $gray;
+  font-style: italic;
+}
+
+//帶有刪除線的字
+.ce-line-through {
+  text-decoration: line-through;
+}
+
+//藍底藍字標記
+.ce-highlight {
+  color: #337ecc;
+  background-color: rgba(178, 200, 253, 0.5) !important;
+  font-weight: 700;
+}
+
+//紅底紅字標記
+.ce-lowlight {
+  color: #f56c6c;
+  background-color: rgb(253, 178, 178, 0.5) !important;
+  font-weight: 700;
+}
+
+//提供表格組件 (el-table, or vxe-table) 套用 footer 樣式
+.footer-row-style {
+  background-color: #f1f8fc;
+  font-weight: 600;
+  color: #78909c;
+}
+.footer-cell {
+  background-color: #e4ecf0;
+  color: #546e7a;
+  padding-top: 0.25rem !important;
+  padding-bottom: 0.25rem !important;
+}
