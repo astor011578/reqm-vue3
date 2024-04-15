@@ -2,8 +2,6 @@ import path from 'path'
 import vue from '@vitejs/plugin-vue'
 import vueJsx from '@vitejs/plugin-vue-jsx'
 import viteSvgIcons from 'vite-plugin-svg-icons'
-//mock
-import { viteMockServe } from 'vite-plugin-mock'
 //inject title
 import { createHtmlPlugin } from 'vite-plugin-html'
 //setup name
@@ -17,7 +15,6 @@ import DefineOptions from 'unplugin-vue-define-options/vite'
 import AutoImport from 'unplugin-auto-import/vite'
 import setting from './src/settings'
 
-const prodMock = setting.openProdMock
 // import packageJson from './package.json'
 // import { loadEnv } from 'vite'
 // import { optimizeDependencies, optimizeElementPlus } from './optimize-include'
@@ -81,18 +78,6 @@ export default ({ command, mode }) => {
         //appoint svg icon using mode
         symbolId: 'icon-[dir]-[name]'
       }),
-      //https://github.com/anncwb/vite-plugin-mock/blob/HEAD/README.zh_CN.md
-      viteMockServe({
-        supportTs: true,
-        mockPath: 'mock',
-        localEnabled: command === 'serve',
-        prodEnabled: prodMock,
-        injectCode: `
-          import { setupProdMockServer } from './mockProdServer';
-          setupProdMockServer();
-        `,
-        logger: true
-      }),
       //VueSetupExtend(), using DefineOptions instantance
       //https://github.com/antfu/unplugin-auto-import/blob/HEAD/src/types.ts
       Components({
@@ -136,7 +121,6 @@ export default ({ command, mode }) => {
         }
       })
     ],
-    //logLevel: 'error',
     build: {
       //target: 'es2015',
       minify: 'terser',
@@ -195,7 +179,6 @@ export default ({ command, mode }) => {
     optimizeDeps: {
       // include: [...optimizeDependencies,...optimizeElementPlus] //on-demand element-plus use this
       // include: [...optimizeDependencies]
-      include: ['moment-mini']
     }
   }
 }

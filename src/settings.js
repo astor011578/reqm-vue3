@@ -32,11 +32,6 @@ const setting = {
 
   //* Others *//
   /**
-   * @description whether need to open prod mock
-   * @type { boolean } true || false
-   */
-  openProdMock: false,
-  /**
    * @description whether need to show error-logs component
    * If you want to also use it in dev, you can pass ['dev', 'test']
    * @type { string | string[] } 'dev' || ['prod', 'test', 'dev'] according to the .env file props of VITE_APP_ENV
