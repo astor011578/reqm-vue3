@@ -2,7 +2,8 @@
   <el-alert
     type="info"
     :title="lang('How to fill out this form?')"
-    show-icon :closable="false"
+    show-icon
+    :closable="false"
   >
     <template #default>
       {{ lang('You can download') }}
@@ -27,3 +28,12 @@ const isDevPath = envPath === './'
 const basePath = '/application/template.xlsx'
 const templatePath = isDevPath ? basePath : `/reqm-vue3${basePath}`
 </script>
+
+<style lang="scss" scoped>
+:deep(.el-alert__title) {
+  font-size: 14px;
+}
+:deep(.el-alert__description) {
+  font-size: 12px;
+}
+</style>
