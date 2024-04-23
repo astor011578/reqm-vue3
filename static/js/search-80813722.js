@@ -1,0 +1,1 @@
+import{_ as s,a,c as e,d as o,e as n}from"./index-e507caa2.js";const r=s({},[["render",function(s,r){const c=a("font-awesome-icon");return e(),o("div",null,[n(c,{icon:"fa-solid fa-magnifying-glass"})])}],["__file","C:/Program Files/Workspace/reqm-vue3/src/icons/common/search.vue"]]);export{r as S};
