@@ -45,7 +45,7 @@ const general = {
   'Review this application': '簽閱此申請',
   'Load all data': '讀取所有資料',
   /* field name & title */
-  'User ID': '全球工號',
+  'User ID': '使用者帳號',
   'User name': '使用者名字',
   'Manager': '直屬主管',
   'E-mail': '公司信箱',
