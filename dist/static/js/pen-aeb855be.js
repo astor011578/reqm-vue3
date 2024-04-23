@@ -1,0 +1,1 @@
+import{_ as e,a as o,c as n,d as s,e as a}from"./index-286476da.js";const r=e({},[["render",function(e,r){const c=o("font-awesome-icon");return n(),s("div",null,[a(c,{icon:"fa-solid fa-pen"})])}],["__file","C:/Program Files/Workspace/reqm-vue3/src/icons/common/pen.vue"]]);export{r as P};

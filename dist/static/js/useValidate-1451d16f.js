@@ -1,0 +1,1 @@
+const e=e=>!!Object.entries(e).length,t=(e,t,a,n)=>{if(e&&t){let l=new Date(e),r=new Date(t);if(l&&r)return a&&n?r-l<0?`${n} date should not be earlier than ${a} date`:"":"Invalid date value"}};export{e as h,t as v};
